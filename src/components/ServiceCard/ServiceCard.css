@@ -1,0 +1,36 @@
+.service-card {
+  width: calc(280rem / 16);
+  padding: calc(20rem / 16);
+  display: flex;
+  flex-direction: column;
+  gap: calc(20rem / 16);
+  border: calc(2rem / 16) solid var(--Base-gray-200);
+  border-radius: calc(12rem / 16);
+}
+
+.service-card[data-theme="light"] {
+  border: calc(2rem / 16) solid var(--Base-gray-500);
+}
+
+.service-card svg {
+  font-size: calc(48rem / 16);
+}
+
+.service-card.icon-purple svg {
+  color: var(--Main-Purple);
+}
+
+.service-card.icon-yellow svg {
+  color: var(--Main-Yellow);
+}
+
+.service-card.icon-green svg {
+  color: var(--Main-Green);
+}
+
+.service-card .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(8rem / 16);
+}

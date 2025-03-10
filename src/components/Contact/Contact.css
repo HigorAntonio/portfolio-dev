@@ -1,0 +1,135 @@
+.contact {
+  padding: calc(128rem / 16) calc(120rem / 16) calc(200rem / 16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(48rem / 16);
+
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  background-color: var(--section-background);
+  background-image: linear-gradient(
+      to right,
+      transparent 0 49px,
+      var(--background-line-color-dark) 49px
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0 49px,
+      var(--background-line-color-dark) 49px
+    );
+  background-size: 50px 50px;
+  &::before {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    content: "";
+    background-image: linear-gradient(
+      to right,
+      rgba(208, 46, 35, 0.5),
+      rgba(123, 67, 182, 0.5)
+    );
+    z-index: -1;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(250px);
+  }
+
+  &::after {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    content: "";
+    background-image: linear-gradient(
+      to right,
+      rgba(208, 46, 35, 0.5),
+      rgba(123, 67, 182, 0.5)
+    );
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(250px);
+  }
+}
+
+.contact[data-theme="light"] {
+  background-color: var(--section-background-light);
+  background-image: linear-gradient(
+      to right,
+      transparent 0 49px,
+      var(--background-line-color-light) 49px
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0 49px,
+      var(--background-line-color-light) 49px
+    );
+}
+
+.contact .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(8rem / 16);
+}
+
+.contact .header .text-small.text-purple {
+  color: var(--Main-Purple);
+  text-align: center;
+  font-family: Inconsolata;
+  font-size: calc(20rem / 16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(24rem / 16);
+}
+
+.contact .header .text-large {
+  color: var(--Base-gray-600);
+  text-align: center;
+  font-family: Asap;
+  font-size: calc(24rem / 16);
+  font-style: normal;
+  font-weight: 700;
+  line-height: calc(28.8rem / 16);
+}
+
+.contact .header .text-large[data-theme="light"] {
+  color: var(--Base-gray-100);
+}
+
+.contact .header .text-very-small {
+  color: var(--Base-gray-500);
+  text-align: center;
+  font-family: "Maven Pro";
+  font-size: calc(16rem / 16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(22.4rem / 16);
+}
+
+.contact .header .text-very-small[data-theme="light"] {
+  color: var(--Base-gray-200);
+}
+
+.contact .links {
+  width: min(100%, calc(400rem / 16));
+  display: flex;
+  flex-direction: column;
+  gap: calc(16rem / 16);
+  position: relative;
+  z-index: 0;
+}
+
+@media (max-width: 650px) {
+  .contact {
+    padding: calc(128rem / 16) calc(20rem / 16) calc(200rem / 16);
+  }
+}

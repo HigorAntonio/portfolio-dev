@@ -1,0 +1,83 @@
+.services {
+  padding: calc(88rem / 16) calc(120rem / 16) calc(120rem / 16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(56rem / 16);
+  background-color: var(--Base-gray-100);
+}
+
+.services[data-theme="light"] {
+  background-color: var(--Base-gray-600);
+}
+
+.services .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(8rem / 16);
+}
+
+.services .header .text-small.text-red {
+  color: var(--Main-Red);
+  text-align: center;
+  font-family: Inconsolata;
+  font-size: calc(20rem / 16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(24rem / 16);
+}
+
+.services .header .text-large {
+  color: var(--Base-gray-600);
+  text-align: center;
+  font-family: Asap;
+  font-size: calc(24rem / 16);
+  font-style: normal;
+  font-weight: 700;
+  line-height: calc(28.8rem / 16);
+}
+
+.services .header .text-large[data-theme="light"] {
+  color: var(--Base-gray-100);
+}
+
+.services .text h3 {
+  color: var(--Base-gray-600);
+  font-family: Asap;
+  font-size: calc(16rem / 16);
+  font-style: normal;
+  font-weight: 700;
+  line-height: calc(19.2rem / 16);
+}
+
+.services .text h3[data-theme="light"] {
+  color: var(--Base-gray-100);
+}
+
+.services .text p {
+  color: var(--Base-gray-500);
+  font-family: "Maven Pro";
+  font-size: calc(14rem / 16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(19.6rem / 16);
+  text-align: start;
+}
+
+.services .text p[data-theme="light"] {
+  color: var(--Base-gray-200);
+}
+
+.services .grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: calc(24rem / 16);
+}
+
+@media (max-width: 650px) {
+  .services {
+    padding: calc(88rem / 16) calc(20rem / 16) calc(120rem / 16);
+  }
+}

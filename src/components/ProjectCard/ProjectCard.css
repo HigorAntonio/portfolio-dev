@@ -1,0 +1,71 @@
+.project-card {
+  width: min(90%, calc(330rem / 16));
+  padding: calc(12rem / 16);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: calc(20rem / 16);
+  background-color: var(--Base-gray-300);
+  outline: 0 solid transparent;
+  border-radius: calc(12rem / 16);
+  text-decoration: none;
+  transition: outline 300ms ease-in-out, transform 300ms ease;
+}
+
+.project-card[data-theme="light"] {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover,
+.project-card:focus {
+  outline: calc(2rem / 16) solid var(--Base-gray-500);
+  transform: scale(1.05);
+}
+
+.project-card:hover[data-theme="light"],
+.project-card:focus[data-theme="light"] {
+  outline: calc(2rem / 16) solid var(--Base-gray-200);
+  transform: scale(1.05);
+}
+
+.project-card .thumbnail {
+  width: 100%;
+  object-fit: cover;
+  border-radius: calc(8rem / 16);
+}
+
+.project-card .text {
+  padding: calc(4rem / 16);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(8rem / 16);
+}
+
+.project-card .text h3 {
+  color: var(--Base-gray-600);
+  font-family: Asap;
+  font-size: calc(16rem / 16);
+  font-style: normal;
+  font-weight: 700;
+  line-height: calc(19.2rem / 16);
+}
+
+.project-card .text h3[data-theme="light"] {
+  color: var(--Base-gray-100);
+}
+
+.project-card .text p {
+  color: var(--Base-gray-500);
+  font-family: "Maven Pro";
+  font-size: calc(14rem / 16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(19.6rem / 16);
+  text-align: start;
+}
+
+.project-card .text p[data-theme="light"] {
+  color: var(--Base-gray-200);
+}

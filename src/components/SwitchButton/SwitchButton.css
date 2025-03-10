@@ -1,0 +1,104 @@
+.switch {
+  position: absolute;
+  top: calc(5rem / 16);
+  right: calc(10rem / 16);
+
+  width: calc(64rem / 16);
+  height: calc(40rem / 16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  z-index: 1;
+}
+
+.track {
+  width: calc(64rem / 16);
+  height: calc(24rem / 16);
+  border: calc(1rem / 16) solid;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--Base-gray-400);
+  background: rgba(255, 255, 255, 0.2);
+
+  &[data-theme="light"] {
+    border-color: var(--Base-gray-400);
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.handle {
+  width: calc(32rem / 16);
+  height: calc(32rem / 16);
+  border-radius: 50%;
+  box-shadow: 0 calc(2rem / 16) calc(8rem / 16) rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  border: none;
+
+  transform: translateX(-1rem);
+
+  &[data-theme="light"] {
+    transform: translateX(1rem);
+  }
+
+  > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(32rem / 16);
+    height: calc(32rem / 16);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    z-index: -1;
+  }
+
+  &::after {
+    background: var(--highlight-color-dark-mode);
+  }
+
+  &[data-theme="light"]::after {
+    background: var(--highlight-color-light-mode);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    transform: translate(-50%, -50%) scale(1.5, 1.5);
+    opacity: 1;
+  }
+}
+
+.handle-icon {
+  width: calc(16rem / 16);
+  height: calc(16rem / 16);
+  border-radius: 50%;
+  background-color: #fff;
+  background: url("../../assets/icons/MoonStars.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &[data-theme="light"] {
+    background: url("../../assets/icons/Sun.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

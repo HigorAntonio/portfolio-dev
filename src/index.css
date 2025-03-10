@@ -1,0 +1,110 @@
+:root {
+  --Main-Red: #e3646e;
+  --Main-Purple: #bb72e9;
+  --Main-Blue: #3996db;
+  --Main-Green: #82bc4f;
+  --Main-Yellow: #eabd5f;
+
+  --Base-gray-100: #0d0e11;
+  --Base-gray-200: #16181d;
+  --Base-gray-300: #292c34;
+  --Base-gray-400: #878ea1;
+  --Base-gray-500: #c0c4ce;
+  --Base-gray-600: #e2e4e9;
+
+  --section-background: #010824;
+  --section-background-light: #d3dcf7;
+  --projects-background: #16181d;
+  --projects-background-light: #d3dcf7;
+  --background-line-color-dark: #eee1;
+  --background-line-color-light: #31313111;
+
+  --highlight-color-dark-mode: rgba(255, 255, 255, 0.2);
+  --highlight-color-light-mode: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: normal;
+  scrollbar-color: var(--border-secondary) var(--background-primary);
+}
+
+.text {
+  max-width: calc(680rem / 16);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: calc(20rem / 16);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(8rem / 16);
+  text-align: center;
+
+  font-size: calc(56rem / 16);
+}
+
+.title .text-small {
+  color: var(--Base-gray-500);
+  font-family: Inconsolata;
+  font-size: calc(20rem / 16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(24rem / 16);
+}
+
+.title .text-small[data-theme="light"] {
+  color: var(--Base-gray-200);
+}
+
+.title .text-red {
+  color: var(--Main-Red);
+  font-size: calc(20rem / 16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(24rem / 16);
+}
+
+.title .text-large {
+  color: var(--Base-gray-600);
+  font-family: Asap;
+  font-size: calc(56rem / 16);
+  font-style: normal;
+  font-weight: 700;
+  line-height: calc(67.2rem / 16);
+}
+
+.title .text-large[data-theme="light"] {
+  color: var(--Base-gray-100);
+}
+
+.text p {
+  color: var(--Base-gray-400);
+  text-align: center;
+  font-family: "Maven Pro";
+  font-size: calc(14rem / 16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: calc(19.6rem / 16);
+}
+
+.text p[data-theme="light"] {
+  color: var(--Base-gray-300);
+}
+
+@media (max-width: 430px) {
+  .title .text-large {
+    font-size: calc(42rem / 16);
+    line-height: calc(50rem / 16);
+  }
+}

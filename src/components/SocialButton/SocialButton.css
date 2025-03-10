@@ -1,0 +1,54 @@
+.social-button {
+  padding: calc(20rem / 16);
+  background-color: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(3px);
+  outline: 0 solid transparent;
+  display: flex;
+  align-items: center;
+  gap: calc(12rem / 16);
+  border-radius: calc(8rem / 16);
+  text-decoration: none;
+  transition: outline 300ms ease-in-out, transform 300ms ease;
+}
+
+.social-button[data-theme="light"] {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.social-button p {
+  color: var(--Base-gray-500);
+  font-family: "Maven Pro";
+  font-size: calc(16rem / 16);
+  font-style: normal;
+  font-weight: 500;
+  line-height: calc(22.4rem / 16);
+  flex-grow: 1;
+}
+
+.social-button p[data-theme="light"] {
+  color: var(--Base-gray-200);
+}
+
+.social-button svg {
+  font-size: calc(28rem / 16);
+  color: var(--Base-gray-400);
+}
+
+.social-button[data-theme="light"] svg {
+  color: var(--Base-gray-300);
+}
+
+.social-button svg.arrow-up-right-icon {
+  color: var(--Main-Blue);
+}
+
+.social-button:hover,
+.social-button:focus {
+  outline: calc(2rem / 16) solid var(--Main-Blue);
+  transform: scale(1.05);
+}
+
+.social-button:hover svg,
+.social-button:focus svg {
+  color: var(--Main-Blue);
+}
